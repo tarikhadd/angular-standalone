@@ -4,12 +4,12 @@ import { LandingPageComponent } from './components/landing-page.component';
 export const appRoutes: Route[] = [
   {
     path: 'lazy',
-    component: ContainerComponent
+    loadComponent: () => import('./components/container.component').then(m => m.ContainerComponent)
   },
 
   {
     path: '',
-    component: LandingPageComponent,
+    loadComponent: () => import('./components/landing-page.component').then(m => m.LandingPageComponent)
   },
 
   {
