@@ -1,0 +1,20 @@
+
+<div class="px-4 text-light" style="font-size: 20px;">
+
+    <h1>Using Create Feature Setup</h1>
+    <br>
+
+    <div *ngIf="!(values$ | async)" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div *ngFor="let v of (values$ | async) | slice: (page-1) * 10 : (page-1) * 10 + 10">
+        <p style="font-weight: bold;">{{v.value}}</p>
+        <hr>
+    </div>
+    
+    <ngb-pagination [pageSize]="pageSize" [collectionSize]="(values$ | async)?.length" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+</div>
+

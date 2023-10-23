@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-landing-page',
   standalone: true,
   imports: [CommonModule],
-  template: `<h1 class="text-light m-0">This is standalone component.</h1>`
+  template: `<div class="d-flex justify-content-center"><img style="width: 500px;" src="../../../assets/angular-icon.svg" alt=""></div>`
 })
 export class LandingPageComponent {
 

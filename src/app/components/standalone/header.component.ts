@@ -20,6 +20,14 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
         }
       }
 
+      .nav {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
     </style>
 
     <ul class="nav navbar-dark bg-dark text-light" style="height: 60px;">
@@ -33,10 +41,30 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
             [routerLink]="'lazy'"
             routerLinkActive="text-warning"
             style="color: white;"
-            class="mx-3 nav-link h-100 d-flex align-items-center">
+            class="ms-3 nav-link h-100 d-flex align-items-center">
                 <h5 class="m-0">Lazy Load</h5>
             </a>
-            </li>
+        </li>
+
+        <li class="nav-item">
+            <a 
+            [routerLink]="'ngrx-standard'"
+            routerLinkActive="text-warning"
+            style="color: white;"
+            class="me-3 nav-link h-100 d-flex align-items-center p-0">
+                <h5 class="m-0">NGRX Standard</h5>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a 
+            [routerLink]="'ngrx-create-feature'"
+            routerLinkActive="text-warning"
+            style="color: white;"
+            class="me-3 nav-link h-100 d-flex align-items-center p-0">
+                <h5 class="m-0">NGRX Create Feature</h5>
+            </a>
+        </li>
     </ul>
   `
 })
